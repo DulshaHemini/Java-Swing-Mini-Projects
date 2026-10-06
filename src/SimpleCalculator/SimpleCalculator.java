@@ -44,6 +44,7 @@ public class SimpleCalculator {
 
         frame.add(panel);
 
+        //Add
         addButton.addActionListener(e -> {
 
             try {
@@ -59,6 +60,7 @@ public class SimpleCalculator {
             }
         });
 
+        //Subtraction
         subtractButton.addActionListener(e -> {
 
             int number1 = Integer.parseInt(number1Field.getText());
@@ -69,6 +71,7 @@ public class SimpleCalculator {
             resultLabel.setText("Result: " + result);
         });
 
+        //Multiplication
         multiplyButton.addActionListener(e -> {
 
             int number1 = Integer.parseInt(number1Field.getText());
@@ -79,6 +82,7 @@ public class SimpleCalculator {
             resultLabel.setText("Result: " + result);
         });
 
+        //Devide
         divideButton.addActionListener(e -> {
 
             double number1 = Double.parseDouble(number1Field.getText());
@@ -92,6 +96,7 @@ public class SimpleCalculator {
             }
         });
 
+        //Clear Button
         clearButton.addActionListener(e -> {
 
             number1Field.setText("");
