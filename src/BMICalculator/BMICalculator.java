@@ -1,0 +1,88 @@
+package BMICalculator;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class BMICalculator {
+
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame("BMI Calculator");
+
+        frame.setSize(700, 650);
+        frame.setLocationRelativeTo(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel panel = new JPanel();
+
+        // Important for setBounds()
+        panel.setLayout(null);
+
+        // Fonts
+        Font titleFont = new Font("Arial", Font.BOLD, 30);
+        Font normalFont = new Font("Arial", Font.PLAIN, 18);
+        Font buttonFont = new Font("Arial", Font.BOLD, 18);
+
+        // Title
+        JLabel lblTitle = new JLabel("BMI Calculator");
+        lblTitle.setFont(titleFont);
+        lblTitle.setBounds(240, 50, 250, 40);
+
+        // Weight
+        JLabel lblWeight = new JLabel("Weight (kg)");
+        lblWeight.setFont(normalFont);
+        lblWeight.setBounds(150, 140, 150, 35);
+
+        JTextField weightField = new JTextField();
+        weightField.setFont(normalFont);
+        weightField.setBounds(300, 140, 220, 40);
+
+        // Height
+        JLabel lblHeight = new JLabel("Height (m)");
+        lblHeight.setFont(normalFont);
+        lblHeight.setBounds(150, 210, 150, 35);
+
+        JTextField heightField = new JTextField();
+        heightField.setFont(normalFont);
+        heightField.setBounds(300, 210, 220, 40);
+
+        // Calculate button
+        JButton calculateButton = new JButton("Calculate BMI");
+        calculateButton.setFont(buttonFont);
+        calculateButton.setBounds(210, 300, 180, 45);
+
+        // Clear button
+        JButton clearButton = new JButton("Clear");
+        clearButton.setFont(buttonFont);
+        clearButton.setBounds(410, 300, 110, 45);
+
+        // Result
+        JLabel resultLabel = new JLabel("BMI:");
+        resultLabel.setFont(normalFont);
+        resultLabel.setBounds(220, 400, 250, 35);
+
+        // Status
+        JLabel statusLabel = new JLabel("Status:");
+        statusLabel.setFont(normalFont);
+        statusLabel.setBounds(220, 450, 300, 35);
+
+        // Add components
+        panel.add(lblTitle);
+
+        panel.add(lblWeight);
+        panel.add(weightField);
+
+        panel.add(lblHeight);
+        panel.add(heightField);
+
+        panel.add(calculateButton);
+        panel.add(clearButton);
+
+        panel.add(resultLabel);
+        panel.add(statusLabel);
+
+        frame.add(panel);
+
+        frame.setVisible(true);
+    }
+}
